@@ -1,0 +1,128 @@
+#ant-man {
+    background-image: url(../images/characters/antman/antman-background.jpg);
+}
+
+#strange {
+    background-image: url(../images/characters/doc-strange/strange-background.jpg);
+}
+
+#hulk {
+    background-image: url(../images/characters/hulk/hulk-background.jpg);
+}
+
+#loki {
+    background-image: url(../images/characters/loki/logi-background.jpg);
+}
+
+#thor {
+    background-image: url(../images/characters/thor/thor-background.jpg);
+}
+
+.characterHero {
+    width: 100%;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    .image {
+        width: 600px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .overview {
+        text-align: center;
+        width: 60%;
+
+        p {
+            color: $white;
+            font: {
+                size: 1.5rem;
+                weight: 700;
+            }
+        }
+
+        a {
+            display: block;
+            width: fit-content;
+            padding: 12px 32px;
+            margin: 64px auto 0 auto;
+            background-color: $white;
+            color: $primary;
+            font: {
+                weight: 700;
+                size: 1.2rem
+            };
+            text-decoration: none;
+        }
+    }
+}
+
+.bio {
+    background-color: #000;
+    color: $white;
+    padding: 36px;
+
+    .title {
+        color: $white;
+        font-size: 1.5rem;
+        margin-bottom: 48px;
+        border-bottom: 5px double $primary;
+    }
+
+    .content {
+
+        font-size: 1.1rem;
+
+        p {
+            margin-bottom: 1.5em;
+        }
+
+        h3 {
+            margin-top: 24px;
+        }
+
+        a {
+            color: white;
+        }
+    }
+}
+
+@media all and (max-width: 700px) {
+
+
+.characterHero {
+
+    .image {
+        width:90%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .overview {
+
+        p {
+            font: {
+                size: 1.25rem;
+            }
+        }
+
+    }
+}
+
+.bio {
+    .title {
+        font-size: 1.25rem;
+    }
+
+}
+
+} // end media

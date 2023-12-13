@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  display: none;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #151515;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent a {
+  color: #FEFEFE;
+  font-weight: 700;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: #EC1D24;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+  color: #EC1D24;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  transition: 0.5s ease;
+  background-color: #151515;
+  z-index: 99;
+}
+header nav {
+  height: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header nav .navItem a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #FEFEFE;
+}
+header nav .navItem a:hover {
+  color: #EC1D24;
+}
+
+.headerIndex {
+  background-color: rgba(21, 21, 21, 0.5);
+  box-shadow: 0px 0px 50px #151515;
+}
+
+.headerIndex:hover {
+  background-color: #151515;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #151515;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .links {
+  list-style-type: none;
+}
+footer .links li, footer .links li a {
+  color: #FEFEFE;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 0;
+}
+
+.hero {
+  width: 100vw;
+  height: fit-content;
+  background-color: #000;
+}
+.hero .heroImage {
+  width: 100%;
+}
+.hero .heroContent {
+  position: relative;
+  text-align: center;
+  bottom: 200px;
+}
+.hero .heroContent h2 {
+  color: #FEFEFE;
+  font-size: 2rem;
+}
+
+.charactersSection {
+  width: 100%;
+  height: fit-content;
+  background-color: #000;
+  padding: 48px;
+}
+.charactersSection .title {
+  color: #FEFEFE;
+  font-size: 1.75rem;
+  margin-bottom: 48px;
+  border-bottom: 5px double #EC1D24;
+}
+.charactersSection .charactersFlex {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 24px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.charactersSection .charactersFlex .characterCard {
+  width: 250px;
+  height: 350px;
+  background-color: #151515;
+  text-decoration: none;
+}
+.charactersSection .charactersFlex .characterCard .image img {
+  width: 100%;
+}
+.charactersSection .charactersFlex .characterCard .content {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  padding: 12px;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: white;
+}
+
+@media all and (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+  }
+  .hero .heroImage {
+    width: 100%;
+  }
+  .hero .heroContent {
+    bottom: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .hero .heroContent h2 {
+    font-size: 1.5rem;
+  }
+  .charactersSection .title {
+    font-size: 1.25rem;
+  }
+}
+#ant-man {
+  background-image: url(../images/characters/antman/antman-background.jpg);
+}
+
+#strange {
+  background-image: url(../images/characters/doc-strange/strange-background.jpg);
+}
+
+#hulk {
+  background-image: url(../images/characters/hulk/hulk-background.jpg);
+}
+
+#loki {
+  background-image: url(../images/characters/loki/logi-background.jpg);
+}
+
+#thor {
+  background-image: url(../images/characters/thor/thor-background.jpg);
+}
+
+.characterHero {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.characterHero .image {
+  width: 600px;
+}
+.characterHero .image img {
+  width: 100%;
+}
+.characterHero .overview {
+  text-align: center;
+  width: 60%;
+}
+.characterHero .overview p {
+  color: #FEFEFE;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.characterHero .overview a {
+  display: block;
+  width: fit-content;
+  padding: 12px 32px;
+  margin: 64px auto 0 auto;
+  background-color: #FEFEFE;
+  color: #EC1D24;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.bio {
+  background-color: #000;
+  color: #FEFEFE;
+  padding: 36px;
+}
+.bio .title {
+  color: #FEFEFE;
+  font-size: 1.5rem;
+  margin-bottom: 48px;
+  border-bottom: 5px double #EC1D24;
+}
+.bio .content {
+  font-size: 1.1rem;
+}
+.bio .content p {
+  margin-bottom: 1.5em;
+}
+.bio .content h3 {
+  margin-top: 24px;
+}
+.bio .content a {
+  color: white;
+}
+
+@media all and (max-width: 700px) {
+  .characterHero .image {
+    width: 90%;
+  }
+  .characterHero .image img {
+    width: 100%;
+  }
+  .characterHero .overview p {
+    font-size: 1.25rem;
+  }
+  .bio .title {
+    font-size: 1.25rem;
+  }
+}
+.terms {
+  width: 90%;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+.terms .title {
+  color: #151515;
+  font-size: 1.5rem;
+  margin-bottom: 48px;
+  border-bottom: 5px double #EC1D24;
+}
+.terms .content h2 {
+  margin-top: 24px;
+  font-size: 1.1rem;
+}
+
+.contactForm {
+  width: 100%;
+  min-height: 700px;
+  padding-top: 80px;
+  background: url(../images/contact.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.contactForm h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px black;
+}
+.contactForm form {
+  background-color: #FEFEFE;
+  padding: 24px;
+}
+.contactForm form input {
+  margin: 12px 0;
+  height: 32px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #151515;
+}
+.contactForm form textarea {
+  padding: 12px;
+  border: 1px solid #151515;
+}
+.contactForm form button {
+  width: 100%;
+  height: 32px;
+  background-color: #EC1D24;
+  color: #FEFEFE;
+  font-weight: 700;
+  border: 0;
+}
+
+@media all and (max-width: 425px) {
+  .contactForm h2 {
+    font-size: 2.5rem;
+  }
+  .contactForm form {
+    width: 90%;
+  }
+  .contactForm form textarea {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
